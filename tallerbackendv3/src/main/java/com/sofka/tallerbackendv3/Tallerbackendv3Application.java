@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Tallerbackendv3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Tallerbackendv3Application.class, args);
+		try{
+                    SpringApplication.run(Tallerbackendv3Application.class, args);
+                } catch (Throwable e){
+                    e.printStackTrace();
+                }
 	}
 
 }

@@ -6,6 +6,7 @@
 package com.sofka.tallerbackendv3.repositories;
 
 import com.sofka.tallerbackendv3.models.UsuarioModel;
+import java.util.ArrayList;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Repository;
  * @author Jeaniel Osorno
  */
 @Repository
-public interface UsuarioRepository extends CrudRepository<UsuarioModel, Long>{
-    
+public interface UsuarioRepository extends CrudRepository<UsuarioModel, Long>{    
+    public abstract ArrayList<UsuarioModel> findByPrioridad(Integer prioridad);
+
 }
