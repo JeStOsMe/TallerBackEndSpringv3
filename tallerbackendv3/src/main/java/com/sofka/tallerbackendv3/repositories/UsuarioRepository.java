@@ -17,5 +17,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UsuarioRepository extends CrudRepository<UsuarioModel, Long>{    
     public abstract ArrayList<UsuarioModel> findByPrioridad(Integer prioridad);
+    //Para traer los usuarios con X nombre.
+    public abstract ArrayList<UsuarioModel> findByNombre(String nombre);
 
 }

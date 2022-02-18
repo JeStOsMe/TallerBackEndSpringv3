@@ -59,4 +59,12 @@ public class UsuarioController {
             return "No se pudo eliminar al usuario con el id " + id;
         }
     }
+    //Dado el nombre ingresado en la dirección usuario/nombre/nombre_a_buscar, trae todos los usuarios
+    //registrados con el nombre ingresado.
+    @GetMapping(path = "/nombre/{nombre}")
+    public ArrayList<UsuarioModel> obtenerUsuarioPorNombre(@PathVariable("nombre") String nombre){
+        return this.usuarioService.obtenerPorNombre(nombre);
+    }
+    
+    
 }

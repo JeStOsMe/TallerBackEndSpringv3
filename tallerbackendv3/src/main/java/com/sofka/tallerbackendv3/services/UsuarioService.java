@@ -45,4 +45,8 @@ public class UsuarioService {
             return false;
         }
     }
+    
+    public ArrayList<UsuarioModel> obtenerPorNombre(String nombre){
+        return usuarioRepository.findByNombre(nombre);
+    }
 }
